@@ -70,6 +70,11 @@ body {
 *:after {
   box-sizing: border-box; }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 hr {
   margin: 10vh 0;
   height: 28px;
@@ -125,9 +130,21 @@ hr {
 .main-section__text {
   font-size: 28px;
   line-height: 1.2em; }
-  .main-section__text span {
-    color: #DD4025;
-    font-weight: 600; }
+  .main-section__text .word-slider {
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    transition: width 0.3s ease; }
+    .main-section__text .word-slider li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #DD4025;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.3s ease; }
+      .main-section__text .word-slider li.active {
+        opacity: 1; }
   @media (min-width: 480px) {
     .main-section__text {
       font-size: 36px; } }

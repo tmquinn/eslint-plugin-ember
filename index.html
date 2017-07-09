@@ -20,7 +20,18 @@
 
       <section class="main-section">
         <div class="main-section__text">
-          Make your code <span>exceptional</span>,<br>
+          Make your code
+          <ul class="js-word-slider word-slider">
+            <li>exceptional,</li>
+            <li>consistent,</li>
+            <li>beautiful,</li>
+            <li>clean,</li>
+            <li>organized,</li>
+            <li>bulletproof,</li>
+            <li>solid,</li>
+            <li>maintainable,</li>
+          </ul>
+          <br>
           just like your app is.
         </div>
         <a href="http://github.com/netguru/eslint-plugin-ember" target="_blank" class="button main-section__btn">Documentation</a>
@@ -73,6 +84,28 @@
     <script src="assets/js/highlight.pack.js"></script>
     <script>
 			hljs.initHighlightingOnLoad();
+
+      function initWordSlider() {
+        var slider = document.querySelector('.js-word-slider');
+        var firstWord = slider.querySelector('li');
+        var activeWord = firstWord;
+        var nextWord;
+
+        activeWord.classList.add('active');
+        slider.style.width = activeWord.offsetWidth + 'px';
+
+        function changeWord() {
+          nextWord = activeWord.nextElementSibling || firstWord;
+          activeWord.classList.remove('active');
+          nextWord.classList.add('active');
+          activeWord = nextWord;
+          slider.style.width = activeWord.offsetWidth + 'px';
+        }
+
+        setInterval(changeWord, 2500);
+      }
+
+      initWordSlider();
 		</script>
   </body>
 </html>
