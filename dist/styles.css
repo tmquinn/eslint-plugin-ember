@@ -1,97 +1,61 @@
-/*
- * Visual Studio 2015 dark style
- * Author: Nicolas LLOBERA <nllobera@gmail.com>
- */
+/* Base16 Atelier Sulphurpool Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* Atelier-Sulphurpool Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #898ea4; }
+
+/* Atelier-Sulphurpool Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #c94922; }
+
+/* Atelier-Sulphurpool Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #dd4025; }
+
+/* Atelier-Sulphurpool Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #4cbaff; }
+
+/* Atelier-Sulphurpool Blue */
+.hljs-title,
+.hljs-section {
+  color: #3d8fd1; }
+
+/* Atelier-Sulphurpool Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #6679cc; }
+
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
-  color: #DCDCDC; }
-
-.hljs-keyword,
-.hljs-literal,
-.hljs-symbol,
-.hljs-name {
-  color: #569CD6; }
-
-.hljs-link {
-  color: #569CD6;
-  text-decoration: underline; }
-
-.hljs-built_in,
-.hljs-type {
-  color: #4EC9B0; }
-
-.hljs-number,
-.hljs-class {
-  color: #B8D7A3; }
-
-.hljs-string,
-.hljs-meta-string {
-  color: #D69D85; }
-
-.hljs-regexp,
-.hljs-template-tag {
-  color: #9A5334; }
-
-.hljs-subst,
-.hljs-function,
-.hljs-title,
-.hljs-params,
-.hljs-formula {
-  color: #DCDCDC; }
-
-.hljs-comment,
-.hljs-quote {
-  color: #57A64A;
-  font-style: italic; }
-
-.hljs-doctag {
-  color: #608B4E; }
-
-.hljs-meta,
-.hljs-meta-keyword,
-.hljs-tag {
-  color: #9B9B9B; }
-
-.hljs-variable,
-.hljs-template-variable {
-  color: #BD63C5; }
-
-.hljs-attr,
-.hljs-attribute,
-.hljs-builtin-name {
-  color: #9CDCFE; }
-
-.hljs-section {
-  color: gold; }
+  color: #d6d6d6;
+  padding: 0.5em; }
 
 .hljs-emphasis {
   font-style: italic; }
 
 .hljs-strong {
   font-weight: bold; }
-
-/*.hljs-code {
-  font-family:'Monospace';
-}*/
-.hljs-bullet,
-.hljs-selector-tag,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #D7BA7D; }
-
-.hljs-addition {
-  background-color: #144212;
-  display: inline-block;
-  width: 100%; }
-
-.hljs-deletion {
-  background-color: #600;
-  display: inline-block;
-  width: 100%; }
 
 body {
   margin: 0;
@@ -107,7 +71,7 @@ body {
   box-sizing: border-box; }
 
 hr {
-  margin: 75px 0;
+  margin: 10vh 0;
   height: 28px;
   background: url("../assets/img/spacer.svg") no-repeat center;
   border: 0; }
@@ -122,7 +86,13 @@ hr {
   font-size: 14px;
   line-height: 1.2em;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: all 0.2s ease; }
+  .button:hover {
+    background: transparent;
+    border-color: #DD4025;
+    color: #DD4025; }
 
 .icon-heart {
   display: inline-block;
@@ -131,12 +101,17 @@ hr {
   background: url("../assets/img/heart-icon.svg") no-repeat; }
 
 .all {
-  width: 474px;
+  width: 504px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
   text-align: center; }
 
 .header {
-  margin: 180px 0 45px; }
+  margin: 10vh 0 7vh; }
+  @media (min-width: 480px) {
+    .header {
+      margin-top: 25vh; } }
   .header__title {
     margin: 0;
     font-size: 21px;
@@ -148,14 +123,17 @@ hr {
       height: 20px; }
 
 .main-section__text {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2em; }
   .main-section__text span {
     color: #DD4025;
     font-weight: 600; }
+  @media (min-width: 480px) {
+    .main-section__text {
+      font-size: 36px; } }
 
 .main-section__btn {
-  margin-top: 80px; }
+  margin-top: 10vh; }
 
 .code-section__title {
   margin-bottom: 30px;
@@ -164,11 +142,14 @@ hr {
 
 .code-block {
   position: relative;
-  background: #3A3A3A;
+  background: #091d33;
   border-radius: 8px;
   overflow: hidden;
-  padding: 70px 40px 40px;
+  padding: 40px 8px 10px;
   text-align: left; }
+  @media (min-width: 480px) {
+    .code-block {
+      padding: 70px 40px 40px; } }
   .code-block::before {
     content: '';
     position: absolute;
@@ -177,11 +158,24 @@ hr {
     left: 0;
     right: 0;
     height: 30px; }
+  .code-block::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    box-shadow: 20px 0px 0px rgba(255, 255, 255, 0.25), 40px 0px 0px rgba(255, 255, 255, 0.25); }
   .code-block pre {
     margin: 0; }
 
 .footer {
-  margin: 200px 0 50px; }
+  margin: 12vh 0 7vh; }
+  @media (min-width: 480px) {
+    .footer {
+      margin-top: 26vh; } }
   .footer__text {
     color: #CACACA;
     font-size: 12px;

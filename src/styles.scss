@@ -5,7 +5,8 @@ $primary-color: #DD4025;
 $text-color: #3A3A3A;
 $text-color-light: #CACACA;
 $bg-color: linear-gradient(-1deg, #FFFFFF 3%, #F4F9FF 97%);
-$code-bg-color: #3A3A3A;
+$code-bg-color: #091d33;
+$screen-md-up: screen and (min-width: 480px);
 
 // Common styles
 body {
@@ -24,7 +25,7 @@ body {
 }
 
 hr {
-  margin: 75px 0;
+  margin: 10vh 0;
   height: 28px;
   background: url('../assets/img/spacer.svg') no-repeat center;
   border: 0;
@@ -41,6 +42,14 @@ hr {
   line-height: 1.2em;
   text-decoration: none;
   text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+  }
 }
 
 .icon-heart {
@@ -52,13 +61,19 @@ hr {
 
 // Landing styles
 .all {
-  width: 474px;
+  width: 504px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
   text-align: center;
 }
 
 .header {
-  margin: 180px 0 45px;
+  margin: 10vh 0 7vh;
+
+  @media #{$screen-md-up} {
+    margin-top: 25vh;
+  }
 
   &__title {
     margin: 0;
@@ -69,6 +84,7 @@ hr {
 
   &__text {
     color: $primary-color;
+
     img {
       height: 20px;
     }
@@ -77,17 +93,21 @@ hr {
 
 .main-section {
   &__text {
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.2em;
 
     span {
       color: $primary-color;
       font-weight: 600;
     }
+
+    @media (min-width: 480px) {
+      font-size: 36px;
+    }
   }
 
   &__btn {
-    margin-top: 80px;
+    margin-top: 10vh;
   }
 }
 
@@ -104,8 +124,12 @@ hr {
   background: $code-bg-color;
   border-radius: 8px;
   overflow: hidden;
-  padding: 70px 40px 40px;
+  padding: 40px 8px 10px;
   text-align: left;
+
+  @media #{$screen-md-up} {
+    padding: 70px 40px 40px;
+  }
 
   &::before {
     content: '';
@@ -117,13 +141,29 @@ hr {
     height: 30px;
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    box-shadow: 20px 0px 0px rgba(255, 255, 255, 0.25), 40px 0px 0px rgba(255, 255, 255, 0.25);
+  }
+
   pre {
     margin: 0;
   }
 }
 
 .footer {
-  margin: 200px 0 50px;
+  margin: 12vh 0 7vh;
+
+  @media #{$screen-md-up} {
+    margin-top: 26vh;
+  }
 
   &__text {
     color: $text-color-light;
