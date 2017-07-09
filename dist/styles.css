@@ -130,27 +130,34 @@ hr {
 .main-section__text {
   font-size: 28px;
   line-height: 1.2em; }
-  .main-section__text .word-slider {
-    height: 35px;
-    display: inline-block;
-    position: relative;
-    transition: width 0.3s ease; }
-    .main-section__text .word-slider li {
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #DD4025;
-      font-weight: 600;
-      opacity: 0;
-      transition: opacity 0.3s ease; }
-      .main-section__text .word-slider li.active {
-        opacity: 1; }
   @media (min-width: 480px) {
     .main-section__text {
       font-size: 36px; } }
 
 .main-section__btn {
   margin-top: 10vh; }
+
+.word-slider {
+  display: inline-block;
+  position: relative;
+  transition: width 0.3s ease; }
+  .word-slider::before {
+    content: '\A';
+    white-space: pre; }
+  .word-slider li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 200px;
+    color: #DD4025;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease; }
+    .word-slider li.active {
+      opacity: 1; }
+    @media (min-width: 480px) {
+      .word-slider li {
+        min-width: 0; } }
 
 .code-section__title {
   margin-bottom: 30px;

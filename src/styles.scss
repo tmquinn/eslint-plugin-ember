@@ -102,27 +102,6 @@ hr {
     font-size: 28px;
     line-height: 1.2em;
 
-    .word-slider {
-      height: 35px;
-      display: inline-block;
-      position: relative;
-      transition: width 0.3s ease;
-
-      li {
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: $primary-color;
-        font-weight: 600;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-
-        &.active {
-          opacity: 1;
-        }
-      }
-    }
-
     @media (min-width: 480px) {
       font-size: 36px;
     }
@@ -130,6 +109,36 @@ hr {
 
   &__btn {
     margin-top: 10vh;
+  }
+}
+
+.word-slider {
+  display: inline-block;
+  position: relative;
+  transition: width 0.3s ease;
+
+  &::before {
+    content: '\A';
+    white-space: pre;
+  }
+
+  li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 200px;
+    color: $primary-color;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.active {
+      opacity: 1;
+    }
+
+    @media #{$screen-md-up} {
+      min-width: 0;
+    }
   }
 }
 
