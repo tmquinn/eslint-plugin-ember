@@ -1,0 +1,147 @@
+@import 'highlight-theme';
+
+// Variables
+$primary-color: #DD4025;
+$text-color: #3A3A3A;
+$text-color-light: #CACACA;
+$bg-color: linear-gradient(-1deg, #FFFFFF 3%, #F4F9FF 97%);
+$code-bg-color: #3A3A3A;
+
+// Common styles
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: $bg-color;
+  color: $text-color;
+  font-family: 'Titillium Web', 'Sans-serif', Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+hr {
+  margin: 75px 0;
+  height: 28px;
+  background: url('../assets/img/spacer.svg') no-repeat center;
+  border: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 47px;
+  background: $primary-color;
+  color: #FFF;
+  border-radius: 100px;
+  box-shadow: 0 2px 10px 0 rgba(221,64,37,0.34);
+  font-size: 14px;
+  line-height: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-heart {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('../assets/img/heart-icon.svg') no-repeat;
+}
+
+// Landing styles
+.all {
+  width: 474px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  margin: 180px 0 45px;
+
+  &__title {
+    margin: 0;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__text {
+    color: $primary-color;
+    img {
+      height: 20px;
+    }
+  }
+}
+
+.main-section {
+  &__text {
+    font-size: 36px;
+    line-height: 1.2em;
+
+    span {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    margin-top: 80px;
+  }
+}
+
+.code-section {
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.code-block {
+  position: relative;
+  background: $code-bg-color;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 70px 40px 40px;
+  text-align: left;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+.footer {
+  margin: 200px 0 50px;
+
+  &__text {
+    color: $text-color-light;
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+
+  &__icon {
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+
+  &__netguru-logo {
+    margin-left: 10px;
+
+    img {
+      height: 12px;
+      vertical-align: middle;
+    }
+  }
+}

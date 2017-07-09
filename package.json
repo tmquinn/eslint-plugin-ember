@@ -1,0 +1,14 @@
+{
+  "name": "eslint-plugin-ember-landing",
+  "version": "1.0.0",
+  "description": "",
+  "author": "michalsnik",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "scripts": {
+    "start": "npm run build -- --watch",
+    "build": "node-sass src/styles.scss dist/styles.css"
+  }
+}

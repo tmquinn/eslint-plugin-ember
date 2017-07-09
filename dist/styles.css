@@ -1,0 +1,196 @@
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #DCDCDC; }
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
+  color: #569CD6; }
+
+.hljs-link {
+  color: #569CD6;
+  text-decoration: underline; }
+
+.hljs-built_in,
+.hljs-type {
+  color: #4EC9B0; }
+
+.hljs-number,
+.hljs-class {
+  color: #B8D7A3; }
+
+.hljs-string,
+.hljs-meta-string {
+  color: #D69D85; }
+
+.hljs-regexp,
+.hljs-template-tag {
+  color: #9A5334; }
+
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
+  color: #DCDCDC; }
+
+.hljs-comment,
+.hljs-quote {
+  color: #57A64A;
+  font-style: italic; }
+
+.hljs-doctag {
+  color: #608B4E; }
+
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-tag {
+  color: #9B9B9B; }
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #BD63C5; }
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-builtin-name {
+  color: #9CDCFE; }
+
+.hljs-section {
+  color: gold; }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+/*.hljs-code {
+  font-family:'Monospace';
+}*/
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #D7BA7D; }
+
+.hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%; }
+
+.hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(-1deg, #FFFFFF 3%, #F4F9FF 97%);
+  color: #3A3A3A;
+  font-family: 'Titillium Web', 'Sans-serif', Arial;
+  -webkit-font-smoothing: antialiased; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+hr {
+  margin: 75px 0;
+  height: 28px;
+  background: url("../assets/img/spacer.svg") no-repeat center;
+  border: 0; }
+
+.button {
+  display: inline-block;
+  padding: 14px 47px;
+  background: #DD4025;
+  color: #FFF;
+  border-radius: 100px;
+  box-shadow: 0 2px 10px 0 rgba(221, 64, 37, 0.34);
+  font-size: 14px;
+  line-height: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.icon-heart {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../assets/img/heart-icon.svg") no-repeat; }
+
+.all {
+  width: 474px;
+  margin: 0 auto;
+  text-align: center; }
+
+.header {
+  margin: 180px 0 45px; }
+  .header__title {
+    margin: 0;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 400; }
+  .header__text {
+    color: #DD4025; }
+    .header__text img {
+      height: 20px; }
+
+.main-section__text {
+  font-size: 36px;
+  line-height: 1.2em; }
+  .main-section__text span {
+    color: #DD4025;
+    font-weight: 600; }
+
+.main-section__btn {
+  margin-top: 80px; }
+
+.code-section__title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 400; }
+
+.code-block {
+  position: relative;
+  background: #3A3A3A;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 70px 40px 40px;
+  text-align: left; }
+  .code-block::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; }
+  .code-block pre {
+    margin: 0; }
+
+.footer {
+  margin: 200px 0 50px; }
+  .footer__text {
+    color: #CACACA;
+    font-size: 12px;
+    margin-bottom: 40px; }
+  .footer__icon {
+    margin: 0 10px;
+    vertical-align: middle; }
+  .footer__netguru-logo {
+    margin-left: 10px; }
+    .footer__netguru-logo img {
+      height: 12px;
+      vertical-align: middle; }
