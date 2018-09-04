@@ -125,6 +125,7 @@ The `--fix` option on the command line automatically fixes problems reported by 
 |:---|:--------|:------------|
 |  | [no-ember-testing-in-module-scope](./docs/rules/no-ember-testing-in-module-scope.md) | Prevents use of Ember.testing in module scope |
 |  | [no-test-import-export](./docs/rules/no-test-import-export.md) | Disallow importing of "-test.js" in a test file and exporting from a test file. |
+|  | [use-nested-qunit-syntax](./docs/rules/use-nested-qunit-syntax.md) | Enforce use of module in tests |
 
 
 ### Stylistic Issues
